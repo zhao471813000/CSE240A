@@ -190,10 +190,6 @@ All grading will be done with respect to your predictor's Misprediciton Rate, as
 
 You get 10 points for correctness of the gshare and tournament predictors (20 points max grade for correctness). If your predictions match the correct output, you get full points. You get 15 points if your custom predictor beats one of the other two (gshare and tournament), and +15 points (30 total) if you beat both of them.
 
-Finally, the 6 best custom predictors (in terms of misprediction rate), will receive extra points. First place gets 6 points, second place gets 5, third gets 4 and so on. **The maximum grade is 56. If your custom predictor does not rank in the top 6, the maximum score you can get is 50/56.**
-
-If you are ranked in the top 6, we need a clear description (in comments in your code) of the number of bits you are using. For example, write something like: I implemented **[X]** as my custom predictor. **[Brief description of how it works]**. This predictor uses two structures. The first one is **[variable name in code]** and the second is **[variable name]**. Then for each structure present the math to calculate its size. We will verify its correctness before you receive the bonus points. Adjust the above text as necessary.
-
 You should do most of your development on your own machine. If you face any issues when you submit your project in gradescope, try to run your project in our Docker image to ensure compatibility with the autograder, or post the error message in Piazza.
 
 #### Grading the custom predictor
@@ -208,7 +204,7 @@ For each predictor (gshare:13, tournament:9:10:10 and your custom predictor), we
 
  A project is considered late at 12:00:01 AM (Which is 1 second past Midnight).
 
-To submit your project, compress the 'src' folder in a **.zip** (not .rar) file and upload it in gradescope. Select only the source files required for compilation and nothing else (binaries, traces etc should not be submitted). This will trigger our autograder to begin grading. You are allowed to submit multiple times.
+To submit your project, compress all source code files under the 'src' folder in a **.zip** (not .rar) file and upload it in gradescope. Select only the source files required for compilation and nothing else (binaries, traces etc should not be submitted). This will trigger our autograder to begin grading. You are allowed to submit multiple times.
 
 Gradescope has a time limit for autograders. Make sure that your code does not do anything unnecessary. For comparison purposes, we will announce our implementation's running time as soon as we optimize it.
 
