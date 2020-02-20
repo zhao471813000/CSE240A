@@ -24,7 +24,7 @@ For this Project you will be implementing various branch predictors in a simulat
 
 ## Code Integrity
 
-Please make sure you do not copy a single line of code from any source.  Not from other students, not from the web, not from anywhere.  We have very sophisticated tools to discover if you did.  This is a graduate class and we have the very highest expectations for integrity.  You should expect that if you do so, even in very small amounts, you will be caught, you will be asked to leave the program, and if an international student, required to leave the country.
+Please make sure you do not copy a single line of code from any source.  Not from other students (except possibly for the contributions of your teammate), not from the web, not from anywhere.  We have very sophisticated tools to discover if you did.  This is a graduate class and we have the very highest expectations for integrity.  You should expect that if you do so, even in very small amounts, you will be caught, you will be asked to leave the program, and if an international student, required to leave the country.
 
 ## Get Started
 
@@ -42,7 +42,7 @@ You will first have to install Docker (for simplicity consider Docker a very lig
 docker pull prodromou87/ucsd_cse240a
 ```
 
-This command will download and build our docker image. It will take a while, but you only have to do this step once. To verify that you have the image, you can run `docker images` and check the the image is listed.
+This command will download and build our docker image. It will take a while, but you only have to do this step once. To verify that you have the image, you can run `docker images` and check the image is listed.
 
 Once you have it, you can start an interactive shell in Docker with
 
@@ -153,7 +153,7 @@ Configuration:
     pcIndexBits     // Indicates the number of bits used to index the PHT
 ```
 
-You will be implementing the Tournament Predictor popularized by the Alpha 21264.  The difference between the Alpha 21264's predictor and the one you will be implementing is that all of the underlying counters in yours will be 2-bit predictors.  You should NOT use a 3-bit counter as used in one of the structure of the Alpha 21264's predictor.  See the Alpha 21264 paper for more information on the general structure of this predictor.  The 'ghistoryBits' will be used to size the global and choice predictors while the 'lhistoryBits' and 'pcIndexBits' will be used to size the local predictor.
+You will be implementing the Tournament Predictor popularized by the Alpha 21264.  The difference between the Alpha 21264's predictor and the one you will be implementing is that all of the underlying counters in yours will be 2-bit predictors.  You should NOT use a 3-bit counter as used in one of the structures of the Alpha 21264's predictor.  See the Alpha 21264 paper for more information on the general structure of this predictor.  The 'ghistoryBits' will be used to size the global and choice predictors while the 'lhistoryBits' and 'pcIndexBits' will be used to size the local predictor.
 
 #### Custom
 
@@ -182,7 +182,7 @@ The Choice Predictor used to select which predictor to use in the Alpha 21264 To
 
 ## Grading
 
-All grading will be done with respect to your predictor's Misprediciton Rate, as well as its correctness (for Gshare and Tournament) compared to our implementation.
+All grading will be done with respect to your predictor's Misprediction Rate, as well as its correctness (for Gshare and Tournament) compared to our implementation.
 
 You get 10 points for correctness of the gshare and tournament predictors (20 points max grade for correctness). If your predictions match the correct output, you get full points. You get 15 points if your custom predictor beats one of the other two (gshare and tournament), and +15 points (30 total) if you beat both of them.
 
@@ -190,13 +190,13 @@ You should do most of your development on your own machine. If you face any issu
 
 #### Grading the custom predictor
 
-We will be comparing your custom predictor against a Gshare predictor with 13 bits of global history (--global:13), which is the largest possible Gshare that fits the 16kb budget. We will also be comparing it against a Tournament predictor of about 14kb. This predictor uses 9 bits of global history, 10 bits of local history and 10 PC bits (--tournamet:9:10:10). These are the two predictors you have to outperform.
+We will be comparing your custom predictor against a Gshare predictor with 13 bits of global history (--global:13), which is the largest possible Gshare that fits the 16kb budget. We will also be comparing it against a Tournament predictor of about 14kb. This predictor uses 9 bits of global history, 10 bits of local history and 10 PC bits (--tournament:9:10:10). These are the two predictors you have to outperform.
 
 For each predictor (gshare:13, tournament:9:10:10 and your custom predictor), we will calculate the average missprediction rate accross all 12 of our traces. Out of those 12, six are visible to you and provided along with the starter code to use during development. The remaining six will remain hidden. Your predictor's average missprediction rate must be better (lower) than the other two to get all the points.
 
 ## Turn-in instructions
 
-**DUE: Nov 12 2019 - Submissions after 11:59:59 PM are considered late**
+**DUE: Mar 04 2020 - Submissions after 11:59:59 PM are considered late**
 
  A project is considered late at 12:00:01 AM (Which is 1 second past Midnight).
 
@@ -212,4 +212,4 @@ We first ensure that your code is compatible with our autograder. If your code f
 
 Once you pass the compatibility test, we grade the output produced by your code. You will be able to see your score on some of our test cases, but some will be hidden. Your overall grade will not be visible until after the project's due date.
 
-**Note:** Gradescope expects pass/fail tests but we will be reporting percentages. If you don't score 100%, Gradescope considers it a failed tests. Do not be concerned when you see failed tests (but be concerned if your score is low and re-submit)
+**Note:** Gradescope expects pass/fail tests but we will be reporting percentages. If you don't score 100%, Gradescope considers it a failed test. Do not be concerned when you see failed tests (but be concerned if your score is low and re-submit)
