@@ -200,7 +200,7 @@ For each predictor (gshare:13, tournament:9:10:10 and your custom predictor), we
 
  A project is considered late at 12:00:01 AM (Which is 1 second past Midnight).
 
-To submit your project, compress all source code files under the 'src' folder in a **.zip** (not .rar) file and upload it in gradescope. Select only the source files required for compilation and nothing else (binaries, traces etc should not be submitted). This will trigger our autograder to begin grading. You are allowed to submit multiple times.
+To submit your project, compress all source code files under the 'src' folder (including the Makefile) in a **.zip** (not .rar) file and upload it in gradescope. Select only the source files required for compilation and nothing else (binaries, traces etc should not be submitted). This will trigger our autograder to begin grading. You are allowed to submit multiple times.
 
 Gradescope has a time limit for autograders. Make sure that your code does not do anything unnecessary. For comparison purposes, we will announce our implementation's running time as soon as we optimize it.
 
